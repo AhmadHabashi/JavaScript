@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Book</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Phone Book</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="Search by name...">
+      <button id="addContactBtn">Add Contact</button>
+      <button id="deleteAllBtn">Delete All</button>
+      <button id="toggleEffectBtn">Toggle Effect</button>
+    </section>
+
+    <section id="contactsList" class="cards-container">
+    </section>
+
+    <p id="emptyMessage" class="hidden">The phone book is empty.</p>
+  </main>
+
+  <div id="popupModal" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="formTitle">Add Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="address" placeholder="Address">
+        <textarea id="notes" placeholder="Notes"></textarea>
+        <input type="file" id="profilePic" accept="image/*">
+        <img id="previewImage" class="image-preview hidden" alt="Preview">
+        <button type="submit">Save</button>
+        <button type="button" id="cancelBtn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="viewModal" class="popup hidden">
+    <div class="popup-content">
+      <h2>Contact Details</h2>
+      <img id="viewImage" class="image-preview" alt="">
+      <p id="viewName"></p>
+      <p id="viewPhone"></p>
+      <p id="viewEmail"></p>
+      <p id="viewAddress"></p>
+      <p id="viewNotes"></p>
+      <button id="closeViewBtn">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by Ahmad_Habashi AND Taher_Mhamed - Final Project 2025</p>
+  </footer>
+
+  <script src="./js.js"></script>
+</body>
+
+</html>
